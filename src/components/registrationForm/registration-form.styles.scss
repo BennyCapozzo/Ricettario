@@ -1,0 +1,12 @@
+.dialog {
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__register {
+        color: #1cff42;
+        cursor: pointer;
+    }
+}

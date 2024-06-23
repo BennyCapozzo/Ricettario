@@ -45,7 +45,7 @@ export const getAllRecipes = async () => {
   try {
     const db = getFirestore(app);
     const recipesSnapshot = await getDocs(collection(db, 'recipes'));
-    const recipes = recipesSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    const recipes = recipesSnapshot.docs.map((doc) => doc.data());
     console.log('Ricette ottenute con successo:', recipes);
     return recipes;
   } catch (error) {
